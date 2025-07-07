@@ -20,14 +20,13 @@ export default function Roteador() {
 
     const fetchClientes = useCallback(async () => {
         try {
-            // Com o proxy, usamos o caminho relativo. O servidor do React encaminhará para localhost:32832
+
             const response = await fetch('/clientes');
             const data = await response.json();
             
-            // Lida com a estrutura HATEOAS do Spring (_embedded)
             if (data._embedded && Array.isArray(data._embedded.clientes)) {
                 setClientes(data._embedded.clientes);
-            } else if (Array.isArray(data)) { // Lida com uma resposta de array simples
+            } else if (Array.isArray(data)) { 
                 setClientes(data);
             } else {
                 setClientes([]);
