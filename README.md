@@ -5,6 +5,12 @@
 Abra o CMD(Prompt de Comando) e clone o repositório em sua máquina usando o comando abaixo ou baixe o código que está na página do repositório:
 
 Obs: É necessário ter o Node, o Git, e o Java 17+ instalado na sua máquina.
+
+Versões testada do NODE:
+
+Node 16.20.2
+Node 22.17.0 LTS
+
 ``` bash
 git clone https://github.com/PedHr/ATVIV-WB.git
 ```
